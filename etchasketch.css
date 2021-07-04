@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Zen+Tokyo+Zoo&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#logo {
+    font-family: 'Zen Tokyo Zoo', sans-serif;
+    font-size: 72px;
+}
+
+#grid-container {
+    
+}
