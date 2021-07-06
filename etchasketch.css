@@ -6,7 +6,8 @@ body {
 
 #logo {
     font-family: 'Zen Tokyo Zoo', sans-serif;
-    font-size: 72px;
+    font-size: 144px;
+    line-height: 0;
 }
 
 #grid_container {
