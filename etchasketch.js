@@ -25,6 +25,17 @@ function addEventListenersToDivs() {
     });
 }
 
+function clearGrid() {
+    const divs = Array.from(grid_container.getElementsByTagName('div'));
+    divs.forEach(div => 
+        div.style.background = 'none'
+        );
+}
+
+// Clear Grid Button
+const clear_button = document.querySelector('#clear_button');
+clear_button.addEventListener('click', clearGrid);
+
 
 
 createGrid(16,16);
