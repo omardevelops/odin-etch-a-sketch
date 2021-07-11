@@ -6,15 +6,36 @@ body {
 
 #logo {
     font-family: 'Zen Tokyo Zoo', sans-serif;
-    font-size: 144px;
+    font-size: 100px;
     line-height: 0;
 }
 
+#container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#buttons_container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#slider_container input {
+    width: 300px;
+}
+
+#slider_container p {
+    margin: 0;
+}
+
 #grid_container {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     border: 2px solid black;
-    margin: 0 auto;
+    margin: 20px;
     padding: 0;
     display: grid;
 }

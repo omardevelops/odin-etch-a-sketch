@@ -32,6 +32,10 @@ function clearGrid() {
         );
 }
 
+function setSize() {
+    
+}
+
 // Clear Grid Button
 const clear_button = document.querySelector('#clear_button');
 clear_button.addEventListener('click', clearGrid);
