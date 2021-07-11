@@ -2,6 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    background-color: rgb(245, 245, 245);
 }
 
 #logo {
@@ -21,6 +22,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: beige;
+    border: 2px solid rgb(196, 195, 195);
+    border-radius: 15px;
+    padding: 20px;
 }
 
 #slider_container input {
@@ -45,5 +50,5 @@ body {
     background: white;
     margin: 0;
     padding: 0;
-    border: 1px solid black;
+    border: 0 solid black;
 }

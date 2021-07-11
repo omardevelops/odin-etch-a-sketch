@@ -19,7 +19,6 @@ function addEventListenersToDivs() {
     divs.forEach(function (div) {
         div.addEventListener('mouseenter', function() {
             let index = Math.floor(Math.random() * 10);
-            console.log(index);
             div.style.background = first_colors[index];
         });
     });
@@ -28,19 +27,35 @@ function addEventListenersToDivs() {
 function clearGrid() {
     const divs = Array.from(grid_container.getElementsByTagName('div'));
     divs.forEach(div => 
-        div.style.background = 'none'
+        div.style.background = 'white'
         );
 }
 
-function setSize() {
-    
+function setSize(width, height) {
+    // Remove all divs
+    let divs = Array.from(grid_container.getElementsByTagName('div'));
+    divs.forEach(div => grid_container.removeChild(div));
+
+    // Create new grid
+    createGrid(width, height);
+    addEventListenersToDivs();
 }
 
 // Clear Grid Button
 const clear_button = document.querySelector('#clear_button');
 clear_button.addEventListener('click', clearGrid);
 
-
+// Slider for size
+const size_slider = document.querySelector('#size_slider');
+size_slider.addEventListener('change', function() {
+    let size = this.value;
+    setSize(size,size);
+});
+size_slider.addEventListener('input', function() {
+    const label = document.querySelector('#size_label');
+    let size = this.value;
+    label.textContent = `${size}x${size}`;
+});
 
 createGrid(16,16);
 addEventListenersToDivs();
