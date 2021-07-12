@@ -49,12 +49,15 @@ clear_button.addEventListener('click', clearGrid);
 const size_slider = document.querySelector('#size_slider');
 size_slider.addEventListener('change', function() {
     let size = this.value;
+    const divs = Array.from(grid_container.getElementsByTagName('div'));
     setSize(size,size);
+    divs.forEach(div => div.style.borderWidth = '1px');
 });
 size_slider.addEventListener('input', function() {
     const label = document.querySelector('#size_label');
     let size = this.value;
     label.textContent = `${size}x${size}`;
+
 });
 
 createGrid(16,16);
